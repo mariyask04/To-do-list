@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function LoginPage() {
@@ -94,7 +95,9 @@ export default function LoginPage() {
 
             {/* Forgot Password */}
             <div className="text-right text-sm text-black md:text-indigo-600 cursor-pointer">
+              <Link href="/forgot-password">
               Forgot password?
+              </Link>
             </div>
 
             {/* Button */}
@@ -109,9 +112,11 @@ export default function LoginPage() {
           {/* Footer */}
           <p className="text-center text-sm text-gray-200 md:text-gray-600 mt-6">
             Don’t have an account?{" "}
-            <span className="text-black md:text-indigo-600 cursor-pointer font-medium">
-              Sign up
-            </span>
+            <Link href="/register">
+              <span className="text-black md:text-indigo-600 cursor-pointer font-medium">
+                Sign up
+              </span>
+            </Link>
           </p>
         </div>
       </div>
